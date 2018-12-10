@@ -38,7 +38,8 @@ _start:
 	mov ebx,Snippet		; Put the address of the first char of the Snippet string in EBX
 	mov eax,SnippetLen	; Length of the Snippet in EAX
 
-DoMore:	add BYTE [ebx],32	; Convert ASCII uppercase to lowercase by adding 32 (decimal)
+DoMore:	
+	add BYTE [ebx],32	; Convert ASCII uppercase to lowercase by adding 32 (decimal)
 	inc ebx			; move the character pointer in EBX to the next char
 	dec eax			; decrement EAX by one value
 	jnz DoMore		; Jump back to the beginning of the loop so long as Zero Flag was not set
