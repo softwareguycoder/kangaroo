@@ -7,7 +7,10 @@
 ;		    demonstrating the use of Linux INT 80H syscalls
 ; 		    to display text AND the use of JMP, INC, and DEC
 ;		    to convert an ASCII string from UPPERCASE to 
-;	            lowercase.  This should print 'kangaroo' on the screen
+;	            lowercase.  This should print 'kangaroo' on the screen.
+;		    NOTE: This program makes an assumption that all the chars
+;	            in the input string are UPPERCASE to begin with; this may not
+;		    be a correct assumption, in general.
 ;
 ; Build using these commands:
 ;	nasm -f elf64 -g -F stabs kangaroo.asm
